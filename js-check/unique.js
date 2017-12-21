@@ -14,10 +14,22 @@
 // [{foo: 'bar'}, {foo: 'bar'}] => [{foo: 'bar'}]
 
 const unique = (arr) => {
-  // Add your code here.
-}
+  let storage = {};
+  let newArr = [];
+  if (Array.isArray(arr)) {
+    for (let i = 0; i < arr.length; i++) {
+      storage[arr[i]] = 0;
+    }
+  }
+  for (let key in storage) {
+    newArr.push(key);
+  }
+  return newArr;
+};
 
-module.exports = unique
+console.log(unique(['a','ab','ab','b','b','c']));
+
+module.exports = unique;
 // Note: It's not neccessary to have all code into the 'unique'
 // function. Feel free to make as many functions as you see
 // fit. Just be sure to leave unique as an exported
