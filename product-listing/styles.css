@@ -1,0 +1,16 @@
+body {
+  box-sizing: content-box;
+  font-family: 'roboto', sans-serif;
+}
+
+nav {
+  background-color: black;
+}
+
+.nav-list-item {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+}
