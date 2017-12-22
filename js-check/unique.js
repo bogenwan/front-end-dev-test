@@ -12,22 +12,26 @@
 // [[1], [1], [2]] => [[1], [2]]
 // handle nested objects:
 // [{foo: 'bar'}, {foo: 'bar'}] => [{foo: 'bar'}]
+var testArr = [2, 3, 6, 8, 10, 9, 4];
 
-const unique = (arr) => {
-  let storage = {};
-  let newArr = [];
-  if (Array.isArray(arr)) {
-    for (let i = 0; i < arr.length; i++) {
-      storage[arr[i]] = 0;
+const filter = function (array, callback) {
+  var arr = [];
+  for (var i = 0; i < array.length; i++) {
+    if (callback(array[i], i, array)) {
+      arr.push(array[i]);
     }
   }
-  for (let key in storage) {
-    newArr.push(key);
-  }
-  return newArr;
+  return arr;
+};
+
+const unique = (arr) => {
+  return filter(arr, function (value, index, list) {
+    return value === list[list.lastIndexOf(value)] && index === list.lastIndexOf(value)
+  });
 };
 
 console.log(unique(['a','ab','ab','b','b','c']));
+console.log(unique([1,2,1,4,3,3,5]));;
 
 module.exports = unique;
 // Note: It's not neccessary to have all code into the 'unique'
