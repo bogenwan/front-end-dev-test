@@ -4,22 +4,51 @@
   <title>Product Listing</title>
   <link rel="stylesheet" type="text/css" href="./styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="https://use.fontawesome.com/c4ab4fa687.js"></script>
 </head>
 <body>
-  <div>
-    <nav class="nav-bar">
-      <ul class="nav-list">
-        <li class="nav-list-item"><a href="">Exterior Accessories</a></li>
-        <li class="nav-list-item"><a href="">Interior Accessories</a></li>
-        <li class="nav-list-item"><a href="">Lighting</a></li>
-        <li class="nav-list-item"><a href="">Performance</a></li>
-        <li class="nav-list-item"><a href="">Specialty</a></li>
-        <li class="nav-list-item"><a href="">Suspension</a></li>
-        <li class="nav-list-item"><a href="">Wheels and Tires</a></li>
-        <li class="nav-list-item"><a href="">Shop By Brand</a></li>
-        <li class="nav-list-item"><a href="">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
+  <div id="page">
+    <header>
+      <div class="logo-bar">
+        <div class="logo">
+          <img src="../assets/realtruck_horizontal.svg" id="real-logo" alt="logo" width="220" height="30">
+        </div><!--logo-->
+        <div class="top-right-container">
+          <form>
+            <input id="search-bar" type="text" name="search-item" placeholder="Search...">
+            <button id="search-button" type="submit"><i id="search-img" class="fa fa-search" aria-hidden="true"></i></button>
+          </form>
+          <i id="phone-img" class="fa fa-phone" aria-hidden="true"></i>
+          <div class="sales-service-container">
+            <div>
+              <span class="phone-number">877-216-5446</span>
+            </div>
+            <div>
+              <span class="sales-service">Sales &amp; Service Hours</span>
+            </div>
+          </div><!-- sales-service-container -->
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </div><!-- top-right-container -->
+      </div><!-- logo-bar -->
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li class="nav-list-item"><a href="">Exterior Accessories</a></li>
+          <li class="nav-list-item"><a href="">Interior Accessories</a></li>
+          <li class="nav-list-item"><a href="">Lighting</a></li>
+          <li class="nav-list-item"><a href="">Performance</a></li>
+          <li class="nav-list-item"><a href="">Specialty</a></li>
+          <li class="nav-list-item"><a href="">Suspension</a></li>
+          <li class="nav-list-item"><a href="">Wheels and Tires</a></li>
+          <li class="nav-list-item"><a href="">Shop By Brand</a></li>
+          <li class="nav-list-item"><a href="">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="main-picture">
+        <img id="truck-pic" src="../assets/truck.png" alt="truck" width="1236" height="auto">
+      </div>
+    </div>
+  </div><!--page-->
 </body>
 </html>
