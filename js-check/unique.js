@@ -31,7 +31,7 @@ const isSameArr = (arr1, arr2) => {
         state = false;
         break;
       } else {
-        state = true
+        state = true;
       }
     }
   } else {
@@ -45,7 +45,7 @@ const isSameObj = (obj1, obj2) => {
   let obj1Keys = Object.keys(obj1);
   let obj2Keys = Object.keys(obj2);
   if (obj1Keys.length === obj2Keys.length) {
-    for (let i = 0; i < obj1Keys.length - 1; i++) {
+    for (let i = 0; i < obj1Keys.length; i++) {
       if (obj1Keys[i] === obj2Keys[i] && obj1[obj1Keys[i]] === obj2[obj2Keys[i]]) {
         state = true;
       } else {
@@ -58,46 +58,38 @@ const isSameObj = (obj1, obj2) => {
   return state;
 };
 
+const getLastUnique = (item, index, list) => {
+  for (let i = list.length -1; i >= 0; i--) {
+    if (Array.isArray(list[i]) && isSameArr(item, list[i])) {
+      if (index === i) {
+        return true;
+        break;
+      } else {
+        break;
+      }
+    }
+    else if (typeof list[i] === 'object' && list[i] !== null && isSameObj(item, list[i])) {
+      if (index === i) {
+        return true;
+        break;
+      } else {
+        break;
+      }
+    }
+  }
+};
+
 const unique = (arr) => {
   return filter(arr, function (elem, index, list) {
     if (Array.isArray(elem)) {
-      for (let i = list.length -1; i >= 0; i--) {
-        if (Array.isArray(list[i]) && isSameArr(elem, list[i])) {
-          if (index === i) {
-            return true;
-            break;
-          } else {
-            break;
-          }
-          console.log('is same arr', isSameArr(elem, list[i]))
-          console.log('index true', index === [i])
-          // if (index === [i]) {
-          //   console.log('983249328432uhuiqhdwuih')
-          //   return true;
-          //   break;
-          // }
-          console.log('elem ==>', elem)
-          console.log('index =>',index)
-          console.log('list ==>', list[i])
-          console.log('i =>',i)
-          // if (isSameArr(elem, list[i]) && index === i) {
-          //   console.log('condition met')
-          //   return true;
-          // } else {
-          //   return false
-          // }
-        }
-      }
+      return getLastUnique(elem, index, list);
+    } else if (typeof elem === 'object' && elem !== null) {
+      return getLastUnique(elem, index, list);
     } else {
-      return elem === list[list.lastIndexOf(elem)] && index === list.lastIndexOf(elem)
+      return elem === list[list.lastIndexOf(elem)] && index === list.lastIndexOf(elem);
     }
   });
 };
-
-console.log(unique(['a','ab','ab','b','b','c']));
-console.log(unique([1,2,1,4,3,3,5]));
-console.log(unique([[1],[4],[1],[1,2]]));
-// console.log(unique([{foo:true},{foo:true},{foo:false},{foo:true,biz:'baz'}]));
 
 module.exports = unique;
 // Note: It's not neccessary to have all code into the 'unique'
