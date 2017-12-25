@@ -11,10 +11,10 @@
     <header>
       <div class="logo-bar">
         <div class="logo">
-          <img src="../assets/realtruck_horizontal.svg" id="real-logo" alt="logo" width="220" height="30">
+          <img src="../assets/realtruck_horizontal.svg" id="real-logo" alt="logo" width="318" height="50">
         </div><!--logo-->
         <div class="top-right-container">
-          <form>
+          <form class="search-form">
             <input id="search-bar" type="text" name="search-item" placeholder="Search...">
             <button id="search-button" type="submit"><i id="search-img" class="fa fa-search" aria-hidden="true"></i></button>
           </form>
@@ -44,11 +44,44 @@
         </ul>
       </nav>
     </header>
-    <div class="content">
-      <div class="main-picture">
-        <img id="truck-pic" src="../assets/truck.png" alt="truck" width="1236" height="auto">
-      </div>
-    </div>
+    <article>
+      <div class="content">
+        <div class="main-picture">
+          <div class="inner-box">
+            <span>Truck Accessories ></span>
+            <span>WHEELS &amp; RIMS</span>
+          </div>
+          <img id="truck-pic" src="../assets/truck.png" alt="truck" width="1236" height="auto">
+        </div><!-- main-picture -->
+        <div class="result-bar">
+          <div class="results">
+            <span>Showing 1 - 30 of 422 results</span>
+          </div><!-- result -->
+          <div class="show-sort-container">
+            <div class="show">
+              <span>Show:</span>
+              <select class="show-select" name="show-select">
+                <option>1</option>
+                <option>5</option>
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+                <option>25</option>
+                <option>30</option>
+              </select>
+            </div><!-- show -->
+            <div class="sort">
+              <span>Sort By:</span>
+              <select name="Sort-select">
+                <option>Recommended</option>
+                <option>Highest Price</option>
+                <option>Lowest Price</option>
+              </select>
+            </div><!-- sort -->
+          </div><!-- show-sort-container -->
+        </div><!-- result-bar -->
+      </div><!-- content -->
+    </article>
   </div><!--page-->
 </body>
 </html>

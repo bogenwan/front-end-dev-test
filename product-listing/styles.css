@@ -15,6 +15,7 @@ body {
 }
 
 .logo {
+  width: 318px;
   border: 1px solid black;
 }
 
@@ -22,6 +23,20 @@ body {
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
+}
+
+.search-form {
+  background-color: #EEEEEE;
+}
+
+#search-bar {
+  border: none;
+  background-color: #EEEEEE;
+}
+
+#search-button {
+  border: none;
+  background-color: #EEEEEE;
 }
 
 .sales-service {
@@ -37,14 +52,46 @@ body {
   display: flex;
   justify-content: space-around;
   padding-left: 5px;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .nav-list-item {
   display: inline;
+  width: 90px;
 }
 
 a {
   text-decoration: none;
-  color: #666;
+  vertical-align: middle;
+  color: #CCCCCC;
 }
+
+.main-picture {
+  position: relative;
+}
+
+.inner-box {
+  position: absolute;
+  top: 730px;
+  left: 15px;
+  width: 396px;
+  height: 80px;
+  background-color: #EFBF34;
+  opacity: 0.9;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-bar {
+  background-color: #EEEEEE;
+}
+
+.show-select{
+  outline: none;
+
+}
+
+
+
+
