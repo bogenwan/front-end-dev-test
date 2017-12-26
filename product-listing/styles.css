@@ -39,11 +39,19 @@ body {
   font-size: 20px;
 }
 
+#search-bar:focus {
+  outline: none;
+}
+
 #search-button {
   float: right;
   border: none;
   background-color: #EEEEEE;
   color: #888888;
+}
+
+#search-button:focus {
+  outline: none;
 }
 
 #search-img {
@@ -100,14 +108,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #000;
+  background-color: #222222;
   list-style-type: none;
   margin: 0px 0px 0px 0px;
   padding: 0;
 }
 
-.nav-list-item:hover {
-  background-color: #444444;
+.nav-list-item {
+  position: relative;
 }
 
 .nav-list-item a {
@@ -118,6 +126,195 @@ body {
   vertical-align: -20px;
   font-weight: bold;
   color: #CCCCCC;
+}
+
+.sublist-item a {
+  text-decoration: none;
+}
+
+.sub-image {
+  position: absolute;
+  width: 200px;
+  height:200px;
+  top: 5px;
+  left: 0px;
+  opacity: 0.1;
+}
+
+.sublist-item a {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.exterior-sublist {
+  display: none;
+  width: 160px;
+  height: 205px;
+  position: absolute;
+  list-style-type: none;
+  z-index: 1000;
+}
+
+.exterior-nav-list-item:hover .exterior-sublist{
+  display: block;
+  background-color: #444444;
+}
+
+.exterior-nav-list-item:hover {
+  display: block;
+  background-color: #444444;
+}
+
+.interior-sublist {
+  display: none;
+  width: 160px;
+  height: 205px;
+  position: absolute;
+  list-style-type: none;
+  z-index: 1000;
+}
+
+.interior-nav-list-item:hover .interior-sublist{
+  display: block;
+  background-color: #444444;
+}
+
+.interior-nav-list-item:hover {
+  display: block;
+  background-color: #444444;
+}
+
+.lighting-sublist {
+  display: none;
+  width: 160px;
+  height: 205px;
+  position: absolute;
+  list-style-type: none;
+  z-index: 1000;
+}
+
+.lighting-nav-list-item:hover .lighting-sublist{
+  display: block;
+  background-color: #444444;
+}
+
+.lighting-nav-list-item:hover {
+  display: block;
+  background-color: #444444;
+}
+
+.performance-sublist {
+  display: none;
+  width: 160px;
+  height: 205px;
+  position: absolute;
+  list-style-type: none;
+  z-index: 1000;
+}
+
+.performance-nav-list-item:hover .performance-sublist{
+  display: block;
+  background-color: #444444;
+}
+
+.performance-nav-list-item:hover {
+  display: block;
+  background-color: #444444;
+}
+
+.specialty-sublist {
+  display: none;
+  width: 160px;
+  height: 205px;
+  position: absolute;
+  list-style-type: none;
+  z-index: 1000;
+}
+
+.specialty-nav-list-item:hover .specialty-sublist{
+  display: block;
+  background-color: #444444;
+}
+
+.specialty-nav-list-item:hover {
+  display: block;
+  background-color: #444444;
+}
+
+.suspension-sublist {
+  display: none;
+  width: 160px;
+  height: 205px;
+  position: absolute;
+  list-style-type: none;
+  z-index: 1000;
+}
+
+.suspension-nav-list-item:hover .suspension-sublist{
+  display: block;
+  background-color: #444444;
+}
+
+.suspension-nav-list-item:hover {
+  display: block;
+  background-color: #444444;
+}
+
+.wheels-sublist {
+  display: none;
+  width: 160px;
+  height: 205px;
+  position: absolute;
+  list-style-type: none;
+  z-index: 1000;
+}
+
+.wheels-nav-list-item:hover .wheels-sublist{
+  display: block;
+  background-color: #444444;
+}
+
+.wheels-nav-list-item:hover {
+  display: block;
+  background-color: #444444;
+}
+
+.brand-sublist {
+  display: none;
+  width: 160px;
+  height: 205px;
+  position: absolute;
+  list-style-type: none;
+  z-index: 1000;
+}
+
+.brand-nav-list-item:hover .brand-sublist{
+  display: block;
+  background-color: #444444;
+}
+
+.brand-nav-list-item:hover {
+  display: block;
+  background-color: #444444;
+}
+
+.contact-sublist {
+  display: none;
+  width: 160px;
+  height: 205px;
+  position: absolute;
+  list-style-type: none;
+  z-index: 1000;
+}
+
+.contact-nav-list-item:hover .contact-sublist{
+  display: block;
+  background-color: #444444;
+}
+
+.contact-nav-list-item:hover {
+  display: block;
+  background-color: #444444;
 }
 
 .main-picture {
