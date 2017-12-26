@@ -14,15 +14,14 @@ body {
   justify-content: space-between;
 }
 
-.logo {
+.realTruck-logo {
   width: 318px;
-  border: 1px solid black;
+  height: 50px;
 }
 
 .top-right-container {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
 }
 
 .search-form {
@@ -44,25 +43,40 @@ body {
 }
 
 .nav-bar {
-  background-color: #000;
   height: 60px;
 }
 
 .nav-list {
-  display: flex;
-  justify-content: space-around;
-  padding-left: 5px;
-  padding-top: 15px;
+  /*display: flex;*/
+  /*justify-content: space-around;*/
+  /*display: inline-block;*/
+  /*line-height: 5px;*/
+  /*padding-top: 15px;*/
+  background-color: #000;
+  list-style-type: none;
+  margin: 0px 0px 10px 0px;
+  padding: 0;
+  overflow: hidden;
 }
 
 .nav-list-item {
-  display: inline;
-  width: 90px;
+  display: inline-block;
+  float: left;
+  /*width: 90px;*/
+  /*height: 60px;*/
+  /*padding-left: 15px;*/
 }
 
-a {
+.nav-list-item:hover {
+  background-color: #444444;
+}
+
+.nav-list-item a {
+  display: block;
   text-decoration: none;
   vertical-align: middle;
+  padding: 10px 12px;
+  /*vertical-align: middle;*/
   color: #CCCCCC;
 }
 
@@ -83,15 +97,118 @@ a {
   flex-direction: column;
 }
 
+.truck-pic {
+  width: 1236px;
+  height: auto;
+}
+
 .result-bar {
   background-color: #EEEEEE;
 }
 
-.show-select{
-  outline: none;
-
+.clearfix:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }
 
+.result {
+  float: left;
+}
 
+.show-sort-container {
+  float: right;
+}
 
+.show-select{
+  outline: none;
+}
 
+.wheels-container {
+  width: 1236px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wheel-figure {
+  padding: 15px 0px;
+  margin: 6px;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.each-wheel {
+  width: 290px;
+  height: auto;
+}
+
+.wheel-description {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.from {
+  vertical-align: top;
+}
+
+.price {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.pagination {
+  float: right;
+  list-style-type: none;
+}
+
+.each-page {
+  display: inline-block;
+  float: left;
+  border: 1px solid #DDDDDD;
+  background-color: #FAFAFA;
+  padding: 5px 10px;
+}
+
+.each-page a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.footer-top {
+  position: relative;
+  width: auto;
+  height: 80px;
+  background-color: #EEB81A;
+}
+
+.footer-bottom {
+  position: absolute;
+  bottom: 0px;
+  height: 60px;
+  width: 100%;
+  background-color: #3D3D3D;
+}
+
+.copyright-container {
+  display: inline-block;
+  margin: 15px 60px;
+  color: #CBCBCB;
+  font-size: 0.7em;
+}
+
+.footer-realTruckCom {
+  color: #FFFFFF;
+}
+
+.footer-logo-container {
+  display: inline-block;
+  float: right;
+  margin: 15px 80px;
+}
+
+.footer-logo {
+  width: 180px;
+  height: 25px;
+}
