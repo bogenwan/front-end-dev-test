@@ -82,28 +82,49 @@ body {
 
 .main-picture {
   position: relative;
+  padding-bottom: none;
 }
 
 .inner-box {
   position: absolute;
-  top: 730px;
-  left: 15px;
+  top: 275px;
+  left: 10px;
   width: 396px;
-  height: 80px;
+  height: 100px;
   background-color: #EFBF34;
   opacity: 0.9;
-  color: #FFFFFF;
   display: flex;
   flex-direction: column;
 }
 
+.inner-text-container {
+  position: absolute;
+  vertical-align: center;
+  top: 295px;
+  left: 25px;
+}
+
+.truck-accessories-text {
+  font-size: 15px;
+  font-weight: bold;
+  color: #666666;
+}
+
+.wheels-and-rims {
+  font-size: 35px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
 .truck-pic {
+  vertical-align: bottom;
   width: 1236px;
   height: auto;
 }
 
 .result-bar {
   background-color: #EEEEEE;
+  margin-top: 0px;
 }
 
 .clearfix:after {
@@ -114,16 +135,39 @@ body {
    clear: both;
 }
 
-.result {
+.results {
   float: left;
+  margin: 10px 10px;
+  font-weight: bold;
+  color: #333;
 }
 
 .show-sort-container {
   float: right;
+  margin: 10px 10px;
+  font-weight: bold;
+  color: #333;
 }
 
-.show-select{
-  outline: none;
+.show {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.show-select {
+  background: transparent;
+  background-color: #FFFFFF;
+  color: #666666;
+}
+
+.sort {
+  display: inline-block;
+}
+
+.sort-select {
+  background: transparent;
+  background-color: #FFFFFF;
+  color: #666666;
 }
 
 .wheels-container {
@@ -137,6 +181,7 @@ body {
   padding: 15px 0px;
   margin: 6px;
   border-bottom: 1px solid #EEEEEE;
+  color: #333;
 }
 
 .each-wheel {
@@ -174,6 +219,7 @@ body {
 .each-page a {
   text-decoration: none;
   text-align: center;
+  font-weight: bold;
 }
 
 .footer-top {
